@@ -1,7 +1,8 @@
 ## INCLUDE rocm-config
 ### RPM external comgr %{rocm_version_num}
 Source0: https://github.com/ROCm/llvm-project/archive/refs/tags/rocm-%{realversion}.tar.gz
-Requires: rocm-llvm rocm-core zlib zstd cmake ninja libxml2
+BuildRequires: cmake ninja
+Requires: rocm-llvm rocm-core zlib zstd libxml2
 Patch0: 0001-comgr-link-with-static-llvm
 
 %prep
@@ -30,6 +31,6 @@ cmake -G "Unix Makefiles" \
 grep -q -E ' [^ ]*libLLVM.so(\.[0-9]+)+git ' %{_builddir}/build-comgr/CMakeFiles/amd_comgr.dir/link.txt
 sed -E -i -e 's@\s[^ ]*libLLVM.so(\.[0-9]+)+git\s@ @' %{_builddir}/build-comgr/CMakeFiles/amd_comgr.dir/link.txt
 
-make -C %{_builddir}/build-comgr %{makeprocesses}
+make -C %{_builddir}/build-comgr %{makeprocesses} VERBOSE=1
 %install
-make -C %{_builddir}/build-comgr install
+make -C %{_builddir}/build-comgr install VERBOSE=1

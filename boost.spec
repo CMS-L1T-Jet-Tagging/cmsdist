@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-### RPM external boost 1.90.0
-## INCLUDE compilation_flags
-%define tag ea1cca296f338b32bb38b9d1ba465e3f6411908c
-%define branch cms/v%realversion
-%define github_user cms-externals
-Source: git+https://github.com/%github_user/%n.git?obj=%{branch}/%{tag}&export=%{n}-%{realversion}&output=/%{n}-%{realversion}.tgz
-=======
-### RPM external boost 1.91.0
 ## INCLUDE compilation_flags
 %define boost_tag %(echo %{realversion} | tr '.' '_')
 Source: https://archives.boost.io/release/%{realversion}/source/boost_%{boost_tag}.tar.gz
 Patch0: patches/boost-cms-fixes
->>>>>>> origin/IB/CMSSW_20_1_X/master
 Requires: python3 bz2lib zlib openmpi xz zstd
 
 

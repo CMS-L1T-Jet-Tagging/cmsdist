@@ -1,4 +1,4 @@
-<tool revision="8">
+<tool revision="9">
   <info url="https://rocm.docs.amd.com/en/docs-@TOOL_REALVERSION@/"/>
   <lib name="amdhip64"/>
   <lib name="hsa-runtime64"/>

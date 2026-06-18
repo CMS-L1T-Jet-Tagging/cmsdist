@@ -2,11 +2,10 @@ Requires: hip rocm-core rocm-llvm rocr-runtime rocm-cmake comgr
 ## INCLUDE rocm-config
 Source0:  %{rocm_libraries_source}
 
-%{?ROCMPrePrep:%ROCMPrePrep}
-
 %prep
-%{?ROCMPostPrep:%ROCMPostPrep}
+%{?ROCMPrePrep:%ROCMPrePrep}
 %setup -q -n rocm-libraries
+%{?ROCMPostPrep:%ROCMPostPrep}
 
 %build
 %{?ROCMPreBuild:%ROCMPreBuild}

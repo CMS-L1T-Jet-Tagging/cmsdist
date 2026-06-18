@@ -1,5 +1,5 @@
---- a/projects/miopen/src/include/miopen/sqlite_db.hpp
-+++ b/projects/miopen/src/include/miopen/sqlite_db.hpp
+--- projects/miopen/src/include/miopen/sqlite_db.hpp
++++ projects/miopen/src/include/miopen/sqlite_db.hpp
 @@ -463,7 +463,7 @@ class SQLitePerfDb
                  ovr_rec.SetValues(vals.at(0), vals.at(1));
              }
@@ -18,8 +18,8 @@
      }
 
      /// Removes ID with associated VALUES from record with key PROBLEM_CONFIG from db.
---- a/projects/miopen/src/find_controls.cpp
-+++ b/projects/miopen/src/find_controls.cpp
+--- projects/miopen/src/find_controls.cpp
++++ projects/miopen/src/find_controls.cpp
 @@ -161,7 +161,7 @@ boost::optional<std::vector<solver::Id>> GetEnvFindOnlySolverImpl()
      if(res.empty())
          return boost::none;
@@ -29,8 +29,8 @@
  }
 
  } // namespace
---- a/projects/miopen/src/ramdb.cpp
-+++ b/projects/miopen/src/ramdb.cpp
+--- projects/miopen/src/ramdb.cpp
++++ projects/miopen/src/ramdb.cpp
 @@ -272,7 +272,7 @@ boost::optional<miopen::DbRecord> RamDb::FindRecordUnsafe(const std::string& pro
          return boost::none;
      }
@@ -40,8 +40,8 @@
  }
 
  template <class TFunc>
---- a/projects/miopen/src/db.cpp
-+++ b/projects/miopen/src/db.cpp
+--- projects/miopen/src/db.cpp
++++ projects/miopen/src/db.cpp
 @@ -209,7 +209,7 @@ boost::optional<DbRecord> PlainTextDb::FindRecordUnsafe(const std::string& key,
              pos->begin = line_begin;
              pos->end   = next_line_begin;
@@ -51,8 +51,8 @@
      }
      // Record was not found
      return boost::none;
---- a/projects/miopen/src/anyramdb.cpp
-+++ b/projects/miopen/src/anyramdb.cpp
+--- projects/miopen/src/anyramdb.cpp
++++ projects/miopen/src/anyramdb.cpp
 @@ -99,7 +99,7 @@ boost::optional<AnyRamDb::TRecord> AnyRamDb::FindRecordUnsafe(const std::string&
      if(it == cache.end())
          return boost::none;
@@ -62,8 +62,8 @@
  }
 
  void AnyRamDb::UpdateCacheEntryUnsafe(const std::string& key, const TRecord& value)
---- a/projects/miopen/src/include/miopen/kern_db.hpp
-+++ b/projects/miopen/src/include/miopen/kern_db.hpp
+--- projects/miopen/src/include/miopen/kern_db.hpp
++++ projects/miopen/src/include/miopen/kern_db.hpp
 @@ -136,7 +136,7 @@ struct KernDb
              auto new_md5 = md5(decompressed_blob);
              if(new_md5 != md5_hash)

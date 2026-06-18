@@ -2,11 +2,13 @@
 ### RPM external miopen %{rocm_version_num}
 Source0: %{rocm_libraries_source}
 Source1: https://raw.githubusercontent.com/suruoxi/half/refs/heads/master/include/half.hpp
+Patch0: miopen-boost-optional-fix
 Requires: hip rocm-core rocm-cmake rocr-runtime rocminfo python3 roctracer sqlite hipblaslt hipblas rocblas rocrand bz2lib hipblas
 Requires: json hipblas-common boost zstd google-test opencl rocm-llvm comgr
 
 %prep
 %setup -q -n rocm-libraries
+%patch0 -p1
 cp %{_sourcedir}/half.hpp %{_builddir}
 
 %build

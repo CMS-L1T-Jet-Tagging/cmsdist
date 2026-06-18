@@ -266,7 +266,7 @@ numexpr==2.14.1
 numpy==1.26.4
 # NO_AUTO_UPDATE:1
 orjson==3.11.5
-onnx==1.17.0
+onnx==1.21.0
 onnxmltools==1.16.0
 onnxconverter-common==1.16.0
 oauthlib==3.3.1
@@ -315,7 +315,6 @@ ptyprocess==0.7.0
 puccinialin==0.1.9
 pure-eval==0.2.3
 py-cpuinfo==9.0.0
-PyYAML==6.0.3
 pyasn1-modules==0.4.2
 pyasn1==0.6.3
 pybind11==3.0.1
@@ -465,7 +464,6 @@ uhi==1.0.0
 uncertainties==3.2.3
 uproot==5.7.1
 urllib3==2.7.0
-uv==0.10.11
 uv-build==0.10.11
 vector==1.8.0
 versioneer==0.29

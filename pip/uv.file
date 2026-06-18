@@ -1,3 +1,0 @@
-Provides: libbz2.so.1()(64bit)
-Requires: bz2lib
-BuildRequires: py3-maturin py3-cargo

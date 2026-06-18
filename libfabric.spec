@@ -7,7 +7,6 @@ Requires: curl
 Requires: numactl
 Requires: rdma-core
 Requires: xpmem
-Requires: rocr-runtime
 
 %prep
 %setup -q -n %{n}-%{realversion}

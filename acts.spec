@@ -57,7 +57,10 @@ source %{_sourcedir}/env
 #     information after installing the libraries.
 #   - HIP/ROCm support is not yet working correctly.
 
-export ROCM_PATH=${ROCM_LLVM_ROOT}
+%if 0%{!?without_rocm:1}
+  export ROCM_PATH=${ROCM_LLVM_ROOT}
+%endif
+
 cmake ../%{n}-%{realversion} \
   -DCMAKE_PREFIX_PATH="%{cmake_prefix_path}" \
   -DCMAKE_CXX_COMPILER="$GCC_ROOT/bin/g++" \
